@@ -1,0 +1,45 @@
+@import '../../../styles/base/func';
+.projectloaading{
+    padding: size(20);
+    background-color: #fff;
+    border-radius: size(12);
+    .content{
+        display: flex;
+        flex-direction: column;
+        gap: size(27);
+        h2{
+            font-size: size(16);
+            font-weight: 500;
+            color: #212529;
+        }
+        .bar {
+            width: 100%;
+            border-radius: size(30);
+            height: size(14); 
+            background-color: #e0e0e0; 
+            position: relative;
+            .filled {
+                width: 16%;
+                border-radius: size(30);
+                height: 100%; 
+                background-color: #0AB39C; 
+                position: absolute;
+                left: 0; 
+                &::after{
+                    content: '';
+                    position: absolute;
+                    top: 50%;
+                    right: 0;
+                    width: 8px;
+                    height: 8px;
+                    border-radius: 50%;
+                    background-color: #fff;
+                    transform: translate(-30% , -50%);
+                    transition: transform 300ms ease;
+                }
+              }
+          }
+        
+    }
+ 
+}

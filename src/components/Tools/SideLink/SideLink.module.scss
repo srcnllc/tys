@@ -1,0 +1,31 @@
+@import '../../../styles/base/func';
+  .sideLink {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: size(12);
+    border-radius: size(8);
+
+    .menüGroup{
+      display: flex;
+      align-items: center;
+      gap: size(12);
+      white-space: nowrap;
+      img {
+        width: size(18);
+        height: size(18);
+      }
+    }
+    .rotate {
+      transform: rotate(90deg); /* 180 derece döndürme */
+      transition: transform 0.3s ease; /* Yumuşak geçiş */
+    }
+    &.active {
+      color: rgba(255, 255, 255, 1);
+      background-color:rgba(255, 255, 255, 0.2);
+    }
+    &:hover {
+      background-color:rgba(255, 255, 255, 0.2);
+    }
+  }
+

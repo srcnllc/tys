@@ -1,0 +1,57 @@
+@import '../../styles/base/func';
+.commentcard{
+    display: flex;
+    gap: size(12);
+    .avatar{
+        width: size(32);
+        height: size(32);
+        img{
+            width: 100%;
+            height: 100%;
+        }
+    }
+    .content{
+        flex: 1;
+        display: flex;
+        flex-direction: column;
+        gap: size(12);
+        .info{
+            display: flex;
+            align-items: center;
+            gap: size(12);
+            .name{
+                font-size: size(13);
+                font-weight: 600;
+                color: #495057;
+            }
+            .date{
+                font-size: size(12);
+                font-weight: 400;
+                color: #878A99;
+            }
+        }
+        .comment{
+            font-size: size(13);
+            font-weight: 400;
+            color: #495057;
+        }
+        .reply{
+            display: flex;
+            gap: size(2);
+            padding: size(2) size(8);
+            border-radius: size(4);
+            background-color: #EFEFF6;
+            width: max-content;
+            img{
+                width: 12px;
+                height: 12px;
+            }
+            p{
+                font-size: size(12);
+                font-weight: 600;
+                color: #878A99;
+            }
+        }
+    }
+ 
+}

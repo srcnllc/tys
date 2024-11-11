@@ -1,0 +1,35 @@
+@import '../../styles/base/func';
+.homePage {
+  overflow: scroll;
+  background-color: #efeff6;
+  padding-inline: size(24);
+  padding-bottom: size(50);
+  &::-webkit-scrollbar {
+    display: none; // Chrome, Safari, Opera
+  }
+  @media #{max-width()} {
+    padding-bottom: size(24);
+    padding-inline: 0;
+  }
+
+  .homeContainer {
+    display: grid;
+    grid-template-columns: 3fr 1fr;
+    gap: size(24);
+    @media #{max-width()} {
+      display: flex;
+      flex-direction: column;
+    }
+    .content {
+      display: flex;
+      flex-direction: column;
+      gap: size(20);
+    }
+    .sectionOne {
+      display: flex;
+      flex-direction: column;
+      flex: 1;
+      gap: size(32);
+    }
+  }
+}

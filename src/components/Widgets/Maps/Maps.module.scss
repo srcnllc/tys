@@ -1,0 +1,39 @@
+@import '../../../styles/base/func';
+.mapsCard {
+  display: flex;
+  flex-direction: column;
+  gap: size(12);
+  background-color: #fff;
+  padding: size(20);
+  border-radius: size(12);
+  h2 {
+    font-size: size(16);
+    font-weight: 500;
+    color: #212529;
+  }
+  .image {
+    img {
+      width: size(350);
+      height: size(200);
+      object-fit: cover;
+      border-radius: size(8);
+      @media #{max-width()} {
+        width: 100%;
+      }
+    }
+  }
+  .info {
+    display: flex;
+    align-items: center;
+    gap: size(8);
+    img {
+      width: size(20);
+      height: size(20);
+    }
+    p {
+      font-size: size(13);
+      font-weight: 400;
+      color: #212529;
+    }
+  }
+}

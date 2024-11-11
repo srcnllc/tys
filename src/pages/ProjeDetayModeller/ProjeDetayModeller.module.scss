@@ -1,0 +1,172 @@
+@import '../../styles/base/func';
+.projedetaymodeller {
+  padding-inline: size(24);
+  padding-bottom: size(149);
+  overflow: scroll;
+  &::-webkit-scrollbar {
+    display: none; // Chrome, Safari, Opera
+  }
+  .modeller {
+    background-color: #fff;
+    border-radius: size(12);
+    padding-bottom: size(10);
+    button {
+      border: none;
+      cursor: pointer;
+      transition: background-color 0.3s;
+      &:hover {
+        background-color: #45a049;
+      }
+    }
+    .topContent {
+      display: flex;
+      justify-content: space-between;
+      padding: size(24);
+      @media #{max-width()} {
+        flex-direction: column;
+        gap: size(20);
+      }
+      .buttons {
+        display: flex;
+        gap: size(12);
+        align-items: center;
+        @media #{max-width()} {
+          flex-direction: column;
+          gap: size(10);
+        }
+        button {
+          padding: size(12) size(20);
+          background-color: #ebe9fe;
+          border-radius: size(6);
+          font-size: size(13);
+          font-weight: 500;
+          color: #878a99;
+          display: flex;
+          align-items: center;
+          gap: size(10);
+          transition: background-color 0.3s;
+          &:hover {
+            background-color: #6938ef;
+            color: #fff;
+          }
+          img {
+            margin-left: 10px; /* Resimlerin butonun içinde biraz boşluk bırakması için */
+            display: inline-block;
+          }
+
+          .inactive {
+            display: none; /* Pasif olan resimleri gizlemek için */
+          }
+          &.activeButton {
+            color: #fff;
+            background-color: #6938ef;
+          }
+        }
+        span {
+          font-size: size(13);
+          font-weight: 500;
+          color: #e44835;
+          cursor: pointer;
+        }
+      }
+      .rightbuttons {
+        display: flex;
+        align-items: center;
+        @media #{max-width()} {
+          flex-direction: column;
+          gap: size(10);
+        }
+        button {
+          background-color: transparent;
+          padding: size(12) size(20);
+          border-radius: size(6);
+          font-size: size(13);
+          font-weight: 500;
+          color: #007aff;
+          display: flex;
+          align-items: center;
+          gap: size(10);
+          transition: background-color 0.3s;
+          &:hover {
+            background-color: rgba(0, 122, 255, 0.1);
+          }
+          &.active {
+            background-color: rgba(0, 122, 255, 0.1);
+          }
+        }
+      }
+    }
+    .tables {
+      @media #{max-width()} {
+        overflow-x: scroll;
+        &::-webkit-scrollbar {
+          display: none; // Chrome, Safari, Opera
+        }
+      }
+    }
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      font-size: 16px;
+
+      th,
+      td {
+        padding: 10px;
+        text-align: start;
+        &:last-child {
+          text-align: center;
+        }
+      }
+      th {
+        background-color: #efeff6;
+        font-size: size(14);
+        font-weight: 600;
+        color: #495057;
+      }
+      tbody {
+        tr {
+          background-color: #fafaff;
+          &:nth-child(odd) {
+            background-color: #fff;
+          }
+          td {
+            font-size: size(13);
+            font-weight: 400;
+            color: #212529;
+            &.updateTime,
+            &.name {
+              display: flex;
+              flex-direction: column;
+              text-align: start;
+              span {
+                font-size: size(11);
+                font-weight: 500;
+                color: #878a99;
+              }
+            }
+            .eye,
+            .transactions {
+              display: flex;
+              align-items: center;
+              justify-content: center;
+              padding: size(7);
+              cursor: pointer;
+              &:hover {
+                img {
+                  width: 20px;
+                  height: 20spx;
+                }
+              }
+              img {
+                width: 18px;
+                height: 18px;
+                background-color: #f4f3ff;
+                border-radius: size(6);
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
